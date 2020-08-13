@@ -2,6 +2,8 @@
 from  sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+import pandas as pd
+
 # response on URL like : http://127.0.0.1:5000/count/u10003/B00002
 def get_response_on_category_in_session(session_id, category, session):
     result = session.execute(
