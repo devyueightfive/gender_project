@@ -25,10 +25,10 @@ json response: {"PREDICTION":"UNKNOWN_SESSION_ID","SESSION_ID":"u00000"}
 
 ## Description
 
-Retrieve service works with local ftp database. The database from https://relational.fit.cvut.cz/dataset/FTP .
+Retrieve service works with **ftp** database. The database from https://relational.fit.cvut.cz/dataset/FTP .
 
 Predictive model is created on base of 2 tables: product and session. Random Forest is used as classifier.
-Score of the model is 0.85 ROC_AUC.
+Score of the model is 0.85 ROC_AUC. The model is saved in /model folder.
 
 ## Installation
 
