@@ -6,7 +6,14 @@ from flask import jsonify
 
 
 # SQLAlchemy
-engine = create_engine("mysql://flask_user:password@localhost/ftp", echo=False)
+# Use following credentials:
+# hostname: relational.fit.cvut.cz
+# port: 3306
+# username: guest
+# password: relational
+
+# engine = create_engine("mysql://flask_user:password@localhost/ftp", echo=False)
+engine = create_engine("mysql://guest:relational@relational.fit.cvut.cz:3306/ftp", echo=False)
 connection = engine.connect()
 # create a configured "Session" class
 Session = sessionmaker(bind=engine)
