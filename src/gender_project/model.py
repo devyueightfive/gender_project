@@ -1,5 +1,10 @@
+# scientific libs
 import numpy as np
 import pandas as pd
+
+# file workers
+import pickle
+import os
 
 # transformers
 from sklearn.base import TransformerMixin
@@ -13,8 +18,7 @@ from sklearn.preprocessing import FunctionTransformer
 # classifier
 from sklearn.ensemble import RandomForestClassifier
 
-# SQLAlchemy
-from  sqlalchemy import create_engine
+
 
 class CategoryTransformer(TransformerMixin):
     def __init__(self, **kwargs):
