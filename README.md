@@ -1,10 +1,34 @@
 # gender_project
 
-Add a short description here!
+Two REST services on Flask.
+
+**1st service is retrieve data from MySQL database.**
+examples:
+
+URL : http://127.0.0.1:5000/count/u10003/B00002
+json response: {"CATEGORY":"B00002","COUNT":12,"SESSION_ID":"u10003"}
+
+or
+
+URL : http://127.0.0.1:5000/count/u10003/000000
+json response: {"CATEGORY":"000000","COUNT":0,"SESSION_ID":"u10003"}
+
+**2nd service is predictive response on session_id.**
+
+URL : http://127.0.0.1:5000/predict/u25000
+json response: {"PREDICTION":"male","SESSION_ID":"u25000"}
+
+or
+
+URL : http://127.0.0.1:5000/predict/u00000
+json response: {"PREDICTION":"UNKNOWN_SESSION_ID","SESSION_ID":"u00000"}
 
 ## Description
 
-A longer description of your project goes here...
+Retrieve service works with local ftp database. The database from https://relational.fit.cvut.cz/dataset/FTP .
+
+Predictive model is created on base of 2 tables: product and session. Random Forest is used as classifier.
+Score of the model is 0.85 ROC_AUC.
 
 ## Installation
 
